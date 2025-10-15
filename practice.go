@@ -33,4 +33,17 @@ func main(){
 	fmt.Println("int : ", b)
 	fmt.Println("float32 : ",c)
 	fmt.Printf("string : %v and %T \n",d,d)
+
+	var test uint8 = 255
+	fmt.Println(test)
+
+	var ftest float32 = 3.4e+38
+	fmt.Printf("%T and value is : %v \n",ftest,ftest)
+
+	var text1 string = "Hello world"
+	var text2 string
+	text3 := "New text"
+	fmt.Printf("Type: %T and Value is: %v \n",text1,text1)
+	fmt.Printf("Type: %T and Value is: %v \n",text2,text2)
+	fmt.Printf("Type: %T and Value is: %v \n",text3,text3)
 }

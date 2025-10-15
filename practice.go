@@ -46,4 +46,41 @@ func main(){
 	fmt.Printf("Type: %T and Value is: %v \n",text1,text1)
 	fmt.Printf("Type: %T and Value is: %v \n",text2,text2)
 	fmt.Printf("Type: %T and Value is: %v \n",text3,text3)
+
+	// var p = 5
+	const q = 3.14
+	var aa int16 = 10
+	const bb  = 5
+	fmt.Printf("type: %T and Value: %v \n",q,q)
+	fmt.Printf("%v \n",aa+bb)
+
+	var arr1 = [3]int{1,2,3}
+	arr2 := [5]int{1,2,3,4,5}
+	arr3 := [...]int{5,6,7,8}
+	cars := [4]string{"BMW","MAZDA","Volvo","FORD"}
+	fmt.Println(arr1)
+	fmt.Println(arr2)
+	fmt.Println(len(arr3))
+	cars[3]="LAMBO"
+	fmt.Println(cars[3])
+	fmt.Println(cars)
+
+	ar1 := [5]int{}
+	ar2 := [5]int{1,2,3,4:500}
+	ar3 := [5]int{1,2,3,4,5}
+
+	fmt.Println(ar1)
+	fmt.Println(ar2)
+	fmt.Println(ar3)
+	
+	arr := [5]int{1,2,3,4,5}
+	fmt.Println(arr)
+	for i,j := 0,len(arr)-1 ; i<j ; i,j = i+1, j-1 {
+		arr[i],arr[j] = arr[j],arr[i]
+	}
+	fmt.Println(arr)
+
+	for i:=0;i<10;i++{
+		fmt.Print(arr[i%len(arr)]," ")
+	}
 }

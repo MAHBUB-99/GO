@@ -13,4 +13,24 @@ func main(){
 	fmt.Printf("%#x\n",i)
 	fmt.Printf("%04d\n",i)
 	fmt.Println("Hello world")
+
+	// var a bool = true
+	// var b int = 5
+	// var c float32 = 3.14
+	// var d string = "Hi"
+
+	// fmt.Println("Boolean : ",a)
+	// fmt.Println("int : ", b)
+	// fmt.Println("float32 : ",c)
+	// fmt.Println("string : ",d)
+
+	var a  = true
+	var b  = 5
+	var c  = 3.14
+	d  := "Hi"
+
+	fmt.Printf("Boolean : %v and %T \n",a,a)
+	fmt.Println("int : ", b)
+	fmt.Println("float32 : ",c)
+	fmt.Printf("string : %v and %T \n",d,d)
 }

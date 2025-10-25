@@ -1,7 +1,37 @@
 package main
-import ("fmt")
+
+import (
+	"fmt"
+	"sync"
+)
 
 func main(){
+	ff := func (a,b int) {
+		c:=a+b
+		fmt.Println(c)
+	}
+	ff(2,3)
+    counter := 0
+	var mu sync.Mutex
+	var wg sync.WaitGroup
+
+    for i := 0; i < 2; i++ {
+		wg.Add(1)
+        go func() {
+			defer wg.Done()
+            for j := 0; j < 10000; j++ {
+				mu.Lock()
+                counter++
+				mu.Unlock()
+            }
+        }()
+    }
+
+	wg.Wait()
+
+    fmt.Println("Counter:", counter)
+
+/*
 	var i = 8
 	fmt.Printf("%b\n",i)
 	fmt.Printf("%b\n",i)
@@ -83,4 +113,5 @@ func main(){
 	for i:=0;i<10;i++{
 		fmt.Print(arr[i%len(arr)]," ")
 	}
+		*/
 }

@@ -32,7 +32,7 @@ func main(){
     fmt.Println("Counter:", counter)
 
 /*
-	var i = 8
+	var i = 8 
 	fmt.Printf("%b\n",i)
 	fmt.Printf("%b\n",i)
 	fmt.Printf("%+d\n",i)
